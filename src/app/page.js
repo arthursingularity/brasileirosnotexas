@@ -7,8 +7,13 @@ export default function Home() {
       {/* =====================
           DOBRA 1 – HERO
       ====================== */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-zinc-800 px-6">
-        <div className="max-w-5xl text-center space-y-6">
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        
+        {/* Background USA + BR */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-zinc-900 to-black" />
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,rgba(0,156,59,0.4),rgba(255,223,0,0.4),rgba(0,40,104,0.4),rgba(191,10,48,0.4))]" />
+
+        <div className="relative max-w-5xl text-center space-y-6">
           <TextComponent
             type="h1"
             content="Recomece sua vida no Texas sabendo onde e como"
@@ -22,7 +27,7 @@ export default function Home() {
           />
 
           <div className="pt-6">
-            <button className="px-10 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
+            <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-500 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
               Quero fazer minha aplicação
             </button>
           </div>
@@ -30,9 +35,9 @@ export default function Home() {
       </section>
 
       {/* =====================
-          DOBRA 2 – DOR / CONSCIÊNCIA
+          DOBRA 2 – DOR
       ====================== */}
-      <section className="py-24 px-6 bg-zinc-950">
+      <section className="py-24 px-6 bg-zinc-950 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto space-y-10">
           <TextComponent
             type="h2"
@@ -46,10 +51,12 @@ export default function Home() {
             <TextComponent type="body" content="• Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?" className="text-zinc-300" />
           </div>
 
+          <div className="h-1 w-24 bg-gradient-to-r from-green-600 to-yellow-400 rounded-full mx-auto" />
+
           <TextComponent
             type="Lead"
             content="Você não está sozinho: eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador."
-            className="pt-6 text-zinc-200"
+            className="pt-6 text-zinc-200 text-center"
           />
         </div>
       </section>
@@ -65,21 +72,26 @@ export default function Home() {
             className="text-center text-white"
           />
 
-          <div className="bg-zinc-800 border border-zinc-700/50 rounded-2xl p-10 text-center">
+          <div className="bg-zinc-800 border border-zinc-700/50 rounded-2xl p-10 text-center relative">
+            <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-700 to-red-600 rounded-l-2xl" />
             <TextComponent
               type="body"
-              content="(Mapa mental visual mostrando crescimento, economia, empregos e migração)"
+              content="Mapa mental visual mostrando crescimento, economia, empregos e migração"
               className="text-zinc-400"
             />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Recebe milhares de novos moradores todos os meses, pessoas deixando lugares caros para construir um futuro mais próspero.",
-              "A economia texana é gigante, maior que muitos países, e continua atraindo empresas e investimentos.",
-              "A criação de empregos supera a média nacional e setores como tecnologia, saúde e construção seguem aquecidos."
+              "Recebe milhares de novos moradores todos os meses.",
+              "Economia maior que muitos países.",
+              "Empregos acima da média nacional."
             ].map((text, index) => (
-              <div key={index} className="bg-zinc-800 p-6 rounded-xl border border-zinc-700/50">
+              <div
+                key={index}
+                className="bg-zinc-800 p-6 rounded-xl border border-zinc-700/50 relative overflow-hidden"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-600" />
                 <TextComponent type="body" content={text} className="text-zinc-300" />
               </div>
             ))}
@@ -90,12 +102,6 @@ export default function Home() {
             content="Se você fizer as escolhas certas e tiver um plano bem estruturado, suas chances de sucesso aumentam exponencialmente."
             className="text-center max-w-4xl mx-auto text-zinc-200"
           />
-
-          <div className="text-center pt-4">
-            <button className="px-10 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
-              Quero fazer minha aplicação
-            </button>
-          </div>
         </div>
       </section>
 
@@ -104,63 +110,21 @@ export default function Home() {
       ====================== */}
       <section className="py-24 px-6 bg-zinc-950">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="w-full h-[420px] bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-400">
+          
+          <div className="w-full h-[420px] rounded-2xl bg-gradient-to-br from-blue-900 via-zinc-800 to-green-900 flex items-center justify-center text-zinc-300">
             Foto profissional do Wesley
           </div>
 
           <div className="space-y-6">
-            <TextComponent type="h3" content="Wesley não fala de teoria, ele fala de EXPERIÊNCIA." className="text-white" />
-            <TextComponent type="body" content="• Imigrante que passou pelo processo real e entendeu os erros e acertos." className="text-zinc-300" />
-            <TextComponent type="body" content="• Mentor com networking estratégico no Texas." className="text-zinc-300" />
-            <TextComponent type="body" content="• Conteúdo real sobre o dia a dia no Texas." className="text-zinc-300" />
+            <TextComponent type="h3" content="Experiência real entre Brasil e Estados Unidos." className="text-white" />
+            <TextComponent type="body" content="• Imigrante que viveu o processo na prática." className="text-zinc-300" />
+            <TextComponent type="body" content="• Networking estratégico no Texas." className="text-zinc-300" />
+            <TextComponent type="body" content="• Conteúdo real sobre a vida nos EUA." className="text-zinc-300" />
 
-            <button className="mt-6 px-8 py-3 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
+            <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-700 to-red-600 text-white font-semibold rounded-xl hover:opacity-90 transition">
               Quero conversar com o Wesley
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* =====================
-          DOBRA 5 – ENTREGA
-      ====================== */}
-      <section className="py-24 px-6 bg-zinc-900">
-        <div className="max-w-5xl mx-auto space-y-10">
-          <TextComponent type="h2" content="O que você vai receber na mentoria" className="text-center text-white" />
-
-          <div className="bg-zinc-800 p-10 rounded-2xl border border-zinc-700/50 space-y-4">
-            {[
-              "Estratégias claras para iniciar sua vida no Texas",
-              "Caminhos inteligentes para usar seu capital",
-              "Conexão com especialistas",
-              "Acompanhamento pessoal",
-              "Apoio em decisões imobiliárias",
-              "Networking qualificado",
-              "Comunidade exclusiva"
-            ].map((item, i) => (
-              <TextComponent key={i} type="body" content={`✔ ${item}`} className="text-zinc-300" />
-            ))}
-          </div>
-
-          <TextComponent
-            type="Lead"
-            content="Tudo isso com quem já trilhou o caminho e sabe os atalhos!"
-            className="text-center text-zinc-200"
-          />
-        </div>
-      </section>
-
-      {/* =====================
-          DOBRA 6 – PROVA SOCIAL
-      ====================== */}
-      <section className="py-24 px-6 bg-zinc-950">
-        <div className="max-w-5xl mx-auto text-center space-y-10">
-          <TextComponent type="h2" content="Resultados reais de quem já está no caminho certo" className="text-white" />
-          <TextComponent type="body" content="Depoimentos e parcerias estratégicas da mentoria." className="text-zinc-400" />
-
-          <button className="px-10 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
-            Quero ter sucesso no Texas
-          </button>
         </div>
       </section>
 
@@ -169,10 +133,10 @@ export default function Home() {
       ====================== */}
       <section className="py-24 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <TextComponent type="h2" content="O Texas está crescendo. As oportunidades não esperam." className="text-white" />
-          <TextComponent type="Lead" content="Quem age agora ocupa as melhores posições." className="text-zinc-300" />
+          <TextComponent type="h2" content="Brasil e Estados Unidos conectados pela oportunidade." className="text-white" />
+          <TextComponent type="Lead" content="Quem age agora constrói o futuro certo no Texas." className="text-zinc-300" />
 
-          <button className="px-12 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
+          <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
             Quero fazer minha aplicação
           </button>
 
