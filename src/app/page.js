@@ -1,3 +1,5 @@
+"use client"
+
 import TextComponent from "./components/ui/TextComponent";
 
 export default function Home() {
@@ -7,11 +9,10 @@ export default function Home() {
       {/* =====================
           DOBRA 1 – HERO
       ====================== */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-        
-        {/* Background USA + BR */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-zinc-900 to-black" />
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,rgba(0,156,59,0.4),rgba(255,223,0,0.4),rgba(0,40,104,0.4),rgba(191,10,48,0.4))]" />
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden animated-gradient">
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative max-w-5xl text-center space-y-6">
           <TextComponent
@@ -23,16 +24,17 @@ export default function Home() {
           <TextComponent
             type="Lead"
             content="Descubra o roteiro completo para imigrar ou investir no Texas com quem já fez isso antes e já ajudou dezenas de brasileiros"
-            className="text-zinc-300 max-w-3xl mx-auto"
+            className="text-zinc-200 max-w-3xl mx-auto"
           />
 
           <div className="pt-6">
-            <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-500 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
+            <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-xl">
               Quero fazer minha aplicação
             </button>
           </div>
         </div>
       </section>
+
 
       {/* =====================
           DOBRA 2 – DOR
@@ -110,7 +112,7 @@ export default function Home() {
       ====================== */}
       <section className="py-24 px-6 bg-zinc-950">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          
+
           <div className="w-full h-[420px] rounded-2xl bg-gradient-to-br from-blue-900 via-zinc-800 to-green-900 flex items-center justify-center text-zinc-300">
             Foto profissional do Wesley
           </div>
@@ -131,10 +133,19 @@ export default function Home() {
       {/* =====================
           DOBRA 7 – URGÊNCIA
       ====================== */}
-      <section className="py-24 px-6 bg-black">
+      <section className="py-24 px-6 text-white animated-gradient-slow">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <TextComponent type="h2" content="Brasil e Estados Unidos conectados pela oportunidade." className="text-white" />
-          <TextComponent type="Lead" content="Quem age agora constrói o futuro certo no Texas." className="text-zinc-300" />
+          <TextComponent
+            type="h2"
+            content="Brasil e Estados Unidos conectados pela oportunidade."
+            className="text-white"
+          />
+
+          <TextComponent
+            type="Lead"
+            content="Quem age agora constrói o futuro certo no Texas."
+            className="text-zinc-300"
+          />
 
           <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
             Quero fazer minha aplicação
@@ -147,7 +158,6 @@ export default function Home() {
           />
         </div>
       </section>
-
     </main>
   );
 }
