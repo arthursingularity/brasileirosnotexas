@@ -201,7 +201,7 @@ export default function Home() {
 
           <TextComponent
             type="body"
-            content="Aqui você pode inserir depoimentos de mentorados ou apresentar o networking dos profissionais envolvidos na mentoria."
+            content="depoimentos de mentorados ou apresentar o networking dos profissionais envolvidos na mentoria."
           />
 
           <button className="px-10 py-4 bg-primary text-white font-semibold rounded-xl hover:opacity-90 transition">
