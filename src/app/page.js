@@ -90,12 +90,10 @@ export default function Home() {
             <TextComponent type="body" content="• Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?" className="text-zinc-300" />
           </div>
 
-          <div className="h-1 w-24 bg-gradient-to-r from-green-600 to-yellow-400 rounded-full mx-auto" />
-
           <TextComponent
-            type="Lead"
+            type="body"
             content="Você não está sozinho: eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador."
-            className="pt-6 text-zinc-200 text-center"
+            className="pt-8 text-zinc-200"
           />
         </div>
       </section>
@@ -111,36 +109,37 @@ export default function Home() {
             className="text-center text-white"
           />
 
-          <div className="bg-zinc-800 border border-zinc-700/50 rounded-2xl p-10 text-center relative">
-            <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-700 to-red-600 rounded-l-2xl" />
-            <TextComponent
-              type="body"
-              content="Mapa mental visual mostrando crescimento, economia, empregos e migração"
-              className="text-zinc-400"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Recebe milhares de novos moradores todos os meses.",
-              "Economia maior que muitos países.",
-              "Empregos acima da média nacional."
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="bg-zinc-800 p-6 rounded-xl border border-zinc-700/50 relative overflow-hidden"
-              >
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-600" />
-                <TextComponent type="body" content={text} className="text-zinc-300" />
-              </div>
-            ))}
+          <div className="bg-zinc-800 border border-zinc-700/50 rounded-2xl p-10 space-y-6">
+            <div className="text-center space-y-4">
+              <TextComponent
+                type="body"
+                content="Recebe milhares de novos moradores todos os meses — pessoas deixando lugares caros para construir um futuro mais próspero."
+                className="text-zinc-300"
+              />
+              <TextComponent
+                type="body"
+                content="A economia texana é gigante, maior que muitos países, e continua atraindo empresas e investimentos."
+                className="text-zinc-300"
+              />
+              <TextComponent
+                type="body"
+                content="A criação de empregos supera a média nacional e setores como tecnologia, saúde e construção seguem aquecidos."
+                className="text-zinc-300"
+              />
+            </div>
           </div>
 
           <TextComponent
-            type="Lead"
-            content="Se você fizer as escolhas certas e tiver um plano bem estruturado, suas chances de sucesso aumentam exponencialmente."
+            type="body"
+            content="Isso significa que, se você fizer as escolhas certas e tiver um plano bem estruturado, suas chances de sucesso aumentam exponencialmente."
             className="text-center max-w-4xl mx-auto text-zinc-200"
           />
+
+          <div className="pt-6 text-center">
+            <button className="cta-premium btn-animated px-12 py-4 bg-gradient-to-r from-green-500 via-yellow-400 to-blue-700 text-black font-bold rounded-xl shadow-xl">
+              Quero fazer minha aplicação
+            </button>
+          </div>
         </div>
       </section>
 
@@ -155,13 +154,87 @@ export default function Home() {
           </div>
 
           <div className="space-y-6">
-            <TextComponent type="h3" content="Experiência real entre Brasil e Estados Unidos." className="text-white" />
-            <TextComponent type="body" content="• Imigrante que viveu o processo na prática." className="text-zinc-300" />
-            <TextComponent type="body" content="• Networking estratégico no Texas." className="text-zinc-300" />
-            <TextComponent type="body" content="• Conteúdo real sobre a vida nos EUA." className="text-zinc-300" />
+            <TextComponent type="h3" content="Wesley não fala de teoria, ele fala de EXPERIÊNCIA." className="text-white" />
+            <TextComponent type="body" content="• Imigrante que passou pelo processo real e entendeu os erros e acertos em sua jornada" className="text-zinc-300" />
+            <TextComponent type="body" content="• Mentor que ajuda brasileiros a terem conexões reais e networking estratégico no estado mais conservador dos EUA." className="text-zinc-300" />
+            <TextComponent type="body" content="• Histórias e informações reais sobre o dia a dia no Texas" className="text-zinc-300" />
 
             <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-700 to-red-600 text-white font-bold rounded-xl hover:opacity-90 transition">
               Quero conversar com o Wesley
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================
+          DOBRA 5 – ENTREGA
+      ====================== */}
+      <section className="py-24 px-6 bg-zinc-900">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <TextComponent
+            type="h2"
+            content="O que você vai receber na mentoria"
+            className="text-center text-white"
+          />
+
+          <TextComponent
+            type="body"
+            content="Ao entrar na minha mentoria exclusiva você terá acesso a:"
+            className="text-center text-zinc-300 text-lg"
+          />
+
+          <div className="space-y-4">
+            {[
+              "Estratégias claras para iniciar sua vida aqui no Texas;",
+              "Caminhos inteligentes para usar seu capital a seu favor;",
+              "Conexão com especialistas em cada área de imigração e internacionalização de patrimônio;",
+              "Acompanhamento pessoal da sua jornada (em encontros pontuais!);",
+              "Apoio de profissionais em decisões imobiliárias e investimentos;",
+              "Networking com outros brasileiros que estão no mesmo caminho;",
+              "Acesso à uma comunidade exclusiva;"
+            ].map((text, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 bg-zinc-800 p-5 rounded-xl border border-zinc-700/50"
+              >
+                <span className="text-green-500 text-xl font-bold">✔</span>
+                <TextComponent type="body" content={text} className="text-zinc-300" />
+              </div>
+            ))}
+          </div>
+
+          <div className="p-8 rounded-2xl text-center">
+            <TextComponent
+              type="h2"
+              content="Tudo isso com quem já trilhou o caminho e sabe os atalhos!"
+              className="text-black font-bold text-white"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* =====================
+          DOBRA 6 – PROVA SOCIAL
+      ====================== */}
+      <section className="py-24 px-6 bg-zinc-950">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <TextComponent
+            type="h2"
+            content="Depoimentos e Resultados"
+            className="text-center text-white"
+          />
+
+          <div className="bg-zinc-800 border border-zinc-700/50 rounded-2xl p-10 text-center">
+            <TextComponent
+              type="body"
+              content="depoimentos"
+              className="text-zinc-400 italic"
+            />
+          </div>
+
+          <div className="pt-6 text-center">
+            <button className="cta-premium btn-animated px-12 py-4 bg-gradient-to-r from-green-500 via-yellow-400 to-blue-700 text-black font-bold rounded-xl shadow-xl">
+              Quero ter sucesso no Texas
             </button>
           </div>
         </div>
@@ -174,14 +247,14 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <TextComponent
             type="h2"
-            content="Brasil e Estados Unidos conectados pela oportunidade."
+            content="O Texas está crescendo. A demanda está alta."
             className="text-white"
           />
 
           <TextComponent
             type="Lead"
-            content="Quem age agora constrói o futuro certo no Texas."
-            className="text-zinc-300"
+            content="As vagas, os investimentos e as oportunidades não esperam, elas são tomadas por quem age agora."
+            className="text-zinc-200"
           />
 
           <button className="btn-animated cta-urgent px-12 py-4 bg-green-500 text-black font-bold rounded-xl shadow-lg">
@@ -190,8 +263,8 @@ export default function Home() {
 
           <TextComponent
             type="body"
-            content="Vagas limitadas para mentoria com acompanhamento pessoal."
-            className="text-zinc-400 pt-4"
+            content="Vagas limitadas para mentoria com acompanhamento pessoal e suporte exclusivo."
+            className="text-zinc-300 pt-4"
           />
         </div>
       </section>
