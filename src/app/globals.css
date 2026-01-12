@@ -144,3 +144,112 @@ body {
   animation: gradientMoveSlow 30s ease infinite;
   will-change: background-position;
 }
+
+.cta-premium {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-premium:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(255, 223, 0, 0.25);
+}
+
+/* =========================
+   BOTÕES – HOVER PREMIUM
+========================= */
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* Desktop hover */
+@media (hover: hover) and (pointer: fine) {
+  .btn-animated:hover {
+    transform: translateY(-3px) scale(1.015);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.05);
+  }
+
+  .btn-animated::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+    transform: translateX(-100%) rotate(25deg);
+    transition: transform 0.6s ease;
+  }
+
+  .btn-animated:hover::after {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+@media (hover: none) {
+  .btn-animated:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+  }
+}
+
+@keyframes pulseSoft {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 223, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0);
+  }
+}
+
+.cta-pulse {
+  animation: pulseSoft 1.6s ease-out 2;
+}
+
+.cta-attention {
+  transform: translateY(-2px) scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.cta-hero {
+  letter-spacing: 0.02em;
+}
+
+.cta-secondary {
+  background-size: 200% 200%;
+}
+
+.cta-secondary:hover {
+  background-position: right center;
+}
+
+.cta-urgent {
+  animation: none;
+}
+
+@media (hover: hover) {
+  .cta-urgent:hover {
+    transform: scale(1.04);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cta-pulse {
+    animation: none;
+  }
+}

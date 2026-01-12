@@ -1,8 +1,45 @@
 "use client"
 
+import { useEffect } from "react";
 import TextComponent from "./components/ui/TextComponent";
 
 export default function Home() {
+  useEffect(() => {
+    const cta = document.querySelector(".cta-premium");
+    const gradient = document.querySelector(".animated-gradient");
+  
+    if (!cta && !gradient) return;
+  
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollRatio = maxScroll > 0 ? scrollY / maxScroll : 0;
+  
+      /* 🎯 CTA reage ao scroll */
+      if (cta) {
+        if (scrollRatio > 0.4) {
+          cta.classList.add("cta-attention");
+        } else {
+          cta.classList.remove("cta-attention");
+        }
+      }
+  
+      /* 🎨 Gradiente reage ao scroll */
+      if (gradient) {
+        gradient.style.backgroundPosition = `${scrollY * 0.04}% 50%`;
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll, { passive: true });
+  
+    // Executa uma vez ao carregar (caso a página já abra scrollada)
+    handleScroll();
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);  
+
   return (
     <main className="flex flex-col w-full bg-zinc-950 text-white">
 
@@ -28,7 +65,7 @@ export default function Home() {
           />
 
           <div className="pt-6">
-            <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-xl">
+            <button className="cta-premium btn-animated cta-hero px-12 py-4 bg-gradient-to-r from-green-500 via-yellow-400 to-blue-700 text-black font-bold rounded-xl shadow-xl">
               Quero fazer minha aplicação
             </button>
           </div>
@@ -123,7 +160,7 @@ export default function Home() {
             <TextComponent type="body" content="• Networking estratégico no Texas." className="text-zinc-300" />
             <TextComponent type="body" content="• Conteúdo real sobre a vida nos EUA." className="text-zinc-300" />
 
-            <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-700 to-red-600 text-white font-semibold rounded-xl hover:opacity-90 transition">
+            <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-700 to-red-600 text-white font-bold rounded-xl hover:opacity-90 transition">
               Quero conversar com o Wesley
             </button>
           </div>
@@ -147,7 +184,7 @@ export default function Home() {
             className="text-zinc-300"
           />
 
-          <button className="px-12 py-4 bg-gradient-to-r from-green-600 via-yellow-400 to-blue-700 text-black font-semibold rounded-xl hover:opacity-90 transition shadow-lg">
+          <button className="btn-animated cta-urgent px-12 py-4 bg-green-500 text-black font-bold rounded-xl shadow-lg">
             Quero fazer minha aplicação
           </button>
 
