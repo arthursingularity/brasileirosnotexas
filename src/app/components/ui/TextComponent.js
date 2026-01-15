@@ -2,7 +2,7 @@ export default function TextComponent({ type, content, className }) {
     const textVariants = {
         h1: {
             tag: "h1",
-            class: "text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-textPrimary"
+            class: "text-4xl md:text-5xl font-bold leading-tight tracking-tight text-textPrimary"
         },
         h2: {
             tag: "h2",
@@ -10,19 +10,19 @@ export default function TextComponent({ type, content, className }) {
         },
         h3: {
             tag: "h3",
-            class: "text-2xl md:text-3xl font-semibold leading-snug text-textPrimary"
+            class: "text-2xl md:text-3xl font-medium leading-snug text-textPrimary"
         },
         sectionTitle: {
             tag: "h2",
-            class: "text-xl md:text-2xl font-semibold uppercase tracking-wide text-textSecondary"
+            class: "font-bold text-[32px] lg:text-[40px] text-textPrimary leading-tight"
         },
-        Lead: {
+        lead: {
             tag: "p",
-            class: "text-lg md:text-xl leading-relaxed text-textSecondary"
+            class: "text-lg font-regular md:text-xl leading-relaxed text-textSecondary"
         },
         body: {
             tag: "p",
-            class: "text-base leading-relaxed text-textTertiary"
+            class: "text-base font-regular leading-relaxed text-textSecondary"
         },
         label: {
             tag: "label",

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Creato', system-ui, sans-serif;
 }
 
 body {
@@ -9,83 +9,71 @@ body {
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-THIN.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-EXTRALIGHT.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-LIGHT.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-REGULAR.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-LIGHT.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-MEDIUM.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-REGULAR.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-SEMIBOLD.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-MEDIUM.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-BOLD.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-EXTRABOLD.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-EXTRABOLD.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-BOLD.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fontes/INTER-BLACK.ttf') format('truetype');
+  font-family: 'Creato';
+  src: url('/fontes/CREATODISPLAY-BLACK.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-    --font-sans: 'Inter', system-ui, sans-serif;
-    --color-primary: #06C755;
-    --color-textPrimary: #0F172A;
-    --color-textSecondary: #3C4D65;
+    --font-sans: 'Creato';
     --color-textTertiary: #64748B;
+    --color-primary: #8B1E1E;
+    --color-primaryDark: #5E1212;
+    --color-secondary: #043788;
+    --color-secondaryDark: #091C2E;
+
+    --color-accent: #D4AF37;
+    --color-accentSoft: #F1D27A;
+
+    --color-backgroundDark: #0A0A0A;
+    --color-surfaceDark: #141414;
+    --color-border: #262626;
+
+    --color-textPrimary: #FFFFFF;
+    --color-textSecondary: #BDBDBD;
+    --color-textMuted: #9CA3AF;
 }
 
 .buttonHover:hover {
@@ -121,14 +109,13 @@ body {
 .animated-gradient {
   background-image: linear-gradient(
     -45deg,
+    #B31942,
     #002776,
     #009C3B,
-    #FFDF00,
-    #B31942,
     #0A3161
   );
   background-size: 400% 400%;
-  animation: gradientMove 25s ease infinite;
+  animation: gradientMove 15s ease infinite;
   will-change: background-position;
 }
 
