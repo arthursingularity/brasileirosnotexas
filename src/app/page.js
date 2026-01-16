@@ -13,11 +13,14 @@ export default function Home() {
       ====================== */}
       <section
         className="relative pt-[160px] pb-[200px] flex items-center justify-center px-6 overflow-hidden"
-        style={{ backgroundImage: "url('/imagens/banner2.png')" }}
+        style={{
+          backgroundImage: "url('/imagens/banner4.png')",
+          backgroundSize: "contain",
+        }}
       >
         {/* Overlay */}
         <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
         <div className="relative max-w-5xl text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
             Recomece sua vida no <span className="text-[#BF092F]">TEXAS</span> sabendo como e onde
