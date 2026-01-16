@@ -12,12 +12,8 @@ export default function Home() {
           DOBRA 1 – HERO
       ====================== */}
       <section
-        className="relative pt-[160px] pb-[200px] flex items-center justify-center px-6 overflow-hidden"
-        style={{
-          backgroundImage: "url('/imagens/banner4.png')",
-          backgroundSize: "contain",
-        }}
-      >
+  className="hero-banner relative pt-[160px] pb-[200px] flex items-center justify-center px-6 bg-no-repeat bg-center"
+>
         {/* Overlay */}
         <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
         <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />

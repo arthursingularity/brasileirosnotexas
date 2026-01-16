@@ -240,3 +240,16 @@ body {
     animation: none;
   }
 }
+
+.hero-banner {
+  background-image: url("/imagens/banner4.png");
+  background-size: contain;
+}
+
+/* Notebook / Laptop em diante */
+@media (min-width: 450px) {
+  .hero-banner {
+    background-image: url("/imagens/banner3.png");
+    background-size: cover;
+  }
+}
