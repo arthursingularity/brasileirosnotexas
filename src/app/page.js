@@ -16,19 +16,19 @@ export default function Home() {
       >
         {/* Overlay */}
         <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
-        <div className="relative max-w-5xl text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-[1px]" />
+        <div className="relative max-w-5xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold leading-[1.25] tracking-tight">
             Recomece sua vida no <span className="text-[#BF092F]">TEXAS</span> sabendo como e onde
           </h1>
 
           <TextComponent
             type="Lead"
             content="Descubra o roteiro completo para imigrar ou investir no Texas com quem já fez isso antes e já ajudou dezenas de brasileiros"
-            className="text-zinc-200 max-w-3xl mx-auto"
+            className="text-zinc-200 max-w-3xl mx-auto mt-[20px]"
           />
 
-          <div className="pt-2">
+          <div className="mt-[30px]">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
               target="_blank"
