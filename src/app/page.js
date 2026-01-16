@@ -58,9 +58,15 @@ export default function Home() {
           />
 
           <div className="pt-2">
-            <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-              Quero fazer minha aplicação
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
+                Quero fazer minha aplicação
+              </button>
+            </a>
           </div>
         </div>
         <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[160px] bg-gradient-to-b from-transparent to-black" />
@@ -103,9 +109,15 @@ export default function Home() {
             className=""
           />
           <div className="pt-10 text-center">
-            <button className="cta-premium btn-animated cursor-pointer px-14 py-5 bg-[#D4AF37] text-black font-bold rounded-2xl shadow-xl hover:scale-105">
-              Quero fazer minha aplicação
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
+                Quero fazer minha aplicação
+              </button>
+            </a>
           </div>
         </div>
 
@@ -150,9 +162,15 @@ export default function Home() {
           />
 
           <div className="pt-2 text-center">
-            <button className="cta-premium btn-animated cursor-pointer px-14 py-5 bg-[#D4AF37] text-black font-bold rounded-2xl shadow-xl hover:scale-105">
-              Quero fazer minha aplicação
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
+                Quero fazer minha aplicação
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -174,9 +192,15 @@ export default function Home() {
             <TextComponent type="body" content="Mentor que ajuda brasileiros a terem conexões reais e networking estratégico no estado mais conservador dos EUA." className="text-zinc-300" />
             <TextComponent type="body" content="Histórias e informações reais sobre o dia a dia no Texas." className="text-zinc-300" />
 
-            <button className="mt-4 px-8 py-4 font-medium cursor-pointer border border-[#D4AF37] text-[#D4AF37] rounded-xl hover:bg-[#D4AF37] hover:text-black transition">
-              Quero conversar com o Wesley
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
+                Quero fazer minha aplicação
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -236,10 +260,15 @@ export default function Home() {
             type="body"
             content="As vagas, os investimentos e as oportunidades não esperam, elas são tomadas por quem age agora."
           />
-
-          <button className="cta-premium btn-animated cursor-pointer px-14 py-5 bg-[#D4AF37] text-black font-bold rounded-2xl shadow-xl hover:scale-105">
-            Quero entrar na mentoria
-          </button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
+              Quero fazer minha aplicação
+            </button>
+          </a>
 
           <TextComponent
             type="lead"
