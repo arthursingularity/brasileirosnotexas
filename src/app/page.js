@@ -4,38 +4,6 @@ import { useEffect } from "react";
 import TextComponent from "./components/ui/TextComponent";
 
 export default function Home() {
-  useEffect(() => {
-    const cta = document.querySelector(".cta-premium");
-    const gradient = document.querySelector(".animated-gradient");
-
-    if (!cta && !gradient) return;
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollRatio = maxScroll > 0 ? scrollY / maxScroll : 0;
-
-      if (cta) {
-        if (scrollRatio > 0.4) {
-          cta.classList.add("cta-attention");
-        } else {
-          cta.classList.remove("cta-attention");
-        }
-      }
-
-      if (gradient) {
-        gradient.style.backgroundPosition = `${scrollY * 0.04}% 50%`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <main className="flex flex-col w-full text-white">
@@ -43,9 +11,13 @@ export default function Home() {
       {/* =====================
           DOBRA 1 – HERO
       ====================== */}
-      <section className="relative pt-[160px] pb-[200px] flex items-center justify-center px-6 overflow-hidden animated-gradient">
+      <section
+        className="relative pt-[160px] pb-[200px] flex items-center justify-center px-6 overflow-hidden"
+        style={{ backgroundImage: "url('/imagens/banner4.png')" }}
+      >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+        <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
         <div className="relative max-w-5xl text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
             Recomece sua vida no <span className="text-[#BF092F]">TEXAS</span> sabendo como e onde
