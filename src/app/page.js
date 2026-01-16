@@ -12,8 +12,8 @@ export default function Home() {
           DOBRA 1 – HERO
       ====================== */}
       <section
-  className="hero-banner relative pt-[160px] pb-[200px] flex items-center justify-center px-6 bg-no-repeat bg-center"
->
+        className="hero-banner relative pt-[160px] pb-[200px] flex items-center justify-center px-6 bg-no-repeat bg-center"
+      >
         {/* Overlay */}
         <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
         <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
@@ -74,11 +74,14 @@ export default function Home() {
 
       <section>
         <div className="px-6 py-20">
-          <TextComponent
-            type="h3"
-            content="Você não está sozinho: eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador."
-            className=""
-          />
+          <div className="flex justify-center">
+            <TextComponent
+              type="h3"
+              content="Você não está sozinho: eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador."
+              className="max-w-[1000px] text-center"
+            />
+          </div>
+
           <div className="pt-10 text-center">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
@@ -244,6 +247,7 @@ export default function Home() {
           <TextComponent
             type="lead"
             content="Vagas limitadas para mentoria com acompanhamento pessoal e suporte exclusivo."
+            className={"mt-6"}
           />
         </div>
         <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[90px] bg-gradient-to-b from-transparent to-black" />
