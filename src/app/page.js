@@ -13,7 +13,7 @@ export default function Home() {
       ====================== */}
       <section
         className="relative pt-[160px] pb-[200px] flex items-center justify-center px-6 overflow-hidden"
-        style={{ backgroundImage: "url('/imagens/banner4.png')" }}
+        style={{ backgroundImage: "url('/imagens/banner2.png')" }}
       >
         {/* Overlay */}
         <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
