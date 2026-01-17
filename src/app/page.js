@@ -104,7 +104,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[50px] h-[50px] rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <img src={`/imagens/${point.icon}`} className="w-[30px]" />
                   </div>
-                  <p className="text-[17px] text-foreground/90 leading-relaxed">
+                  <p className="text-[17px] text-foreground/90 leading-[1.4]">
                     {point.text}
                   </p>
                 </div>
