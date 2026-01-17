@@ -1,257 +1,129 @@
 "use client"
 
-import { useEffect } from "react";
-import TextComponent from "./components/ui/TextComponent";
+import NavBar from "./components/ui/NavBar"
+import { HelpCircle, TrendingUp, AlertTriangle } from "lucide-react";
 
 export default function Home() {
+  const painPoints = [
+    {
+      icon: HelpCircle,
+      text: "Tem visto ou condições para imigrar para o Texas, mas não sabe por onde começar?",
+    },
+    {
+      icon: TrendingUp,
+      text: "Tem capital para investir no estado que mais cresce nos Estados Unidos, mas não sabe como transformar isso em oportunidades reais?",
+    },
+    {
+      icon: AlertTriangle,
+      text: "Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?",
+    },
+  ];
 
   return (
-    <main className="flex flex-col w-full text-white">
 
-      {/* =====================
-          DOBRA 1 – HERO
-      ====================== */}
-      <section
-        className="hero-banner relative pt-[160px] pb-[200px] flex items-center justify-center px-6 bg-no-repeat bg-center"
-      >
-        {/* Overlay */}
-        <div className="pointer-events-none absolute top-0 left-0 w-full h-[160px] bg-gradient-to-b from-black to-transparent" />
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-[1px]" />
-        <div className="relative max-w-5xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold leading-[1.25] tracking-tight">
-            Recomece sua vida no <span className="text-[#BF092F]">TEXAS</span> sabendo como e onde
-          </h1>
+    <div className="text-white">
+      <NavBar />
+      <section className="relative py-24 px-6 mt-[65px] flex items-center justify-center bg-heroBg overflow-hidden pt-16">
+        <div className="mt-16">
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-          <TextComponent
-            type="Lead"
-            content="Descubra o roteiro completo para imigrar ou investir no Texas com quem já fez isso antes e já ajudou dezenas de brasileiros"
-            className="text-zinc-200 max-w-3xl mx-auto mt-[20px]"
-          />
+          {/* Glow effect */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gold/5 rounded-full blur-[120px]" />
 
-          <div className="mt-[30px]">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-                Quero fazer minha aplicação
-              </button>
-            </a>
-          </div>
-        </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[160px] bg-gradient-to-b from-transparent to-black" />
-      </section>
-      {/* =====================
-          DOBRA 2 – DOR
-      ====================== */}
-      <section
-        className="relative py-28 px-6 bg-cover bg-center bg-black"
-        style={{ backgroundImage: "url('/imagens/banner4.png')" }}
-      >
-        <div className="pointer-events-none absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-black to-transparent" />
-        <div className="absolute inset-0 bg-black/92 backdrop-blur-[1px]" />
-        <div className="relative max-w-4xl mx-auto space-y-10">
-          <TextComponent
-            type="sectionTitle"
-            content="Esta mentoria é para você que já…"
-            className="text-center text-white"
-          />
+          <div className="container mx-auto relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
 
-          <div className="space-y-6">
-            <div className="bg-[#141414] border border-[#262626] p-6 rounded-xl">
-              <TextComponent type="body" content="Tem visto ou condições para imigrar para o Texas, mas NÃO sabe por onde começar?" />
-            </div>
-            <div className="bg-[#141414] border border-[#262626] p-6 rounded-xl">
-              <TextComponent type="body" content="Tem capital para investir no estado que mais cresce nos Estados Unidos, mas não sabe como transformar isso em oportunidades reais?" />
-            </div>
-            <div className="bg-[#141414] border border-[#262626] p-6 rounded-xl">
-              <TextComponent type="body" content="Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?" />
-            </div>
-          </div>
-        </div>
-      </section>
+              {/* Title */}
+              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in animation-delay-200">
+                Recomece sua vida no <span className="text-gold">Texas</span> sabendo onde e como
+              </h1>
 
-      <section>
-        <div className="px-6 py-20">
-          <div className="flex justify-center">
-            <TextComponent
-              type="h3"
-              content="Você não está sozinho: eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador."
-              className="max-w-[1000px] text-center"
-            />
-          </div>
+              {/* Subtitle */}
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in animation-delay-400">
+                Descubra o roteiro completo para imigrar ou investir no Texas com quem já fez isso antes e já ajudou dezenas de brasileiros
+              </p>
 
-          <div className="pt-10 text-center">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-                Quero fazer minha aplicação
-              </button>
-            </a>
-          </div>
-        </div>
-
-      </section>
-
-      {/* =====================
-          DOBRA 3 – BENEFÍCIOS
-      ====================== */}
-      <section className="py-24 px-6 bg-zinc-900">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <TextComponent
-            type="h2"
-            content="O Texas não é apenas um destino, é um estado que cresce de verdade"
-            className="text-center text-white"
-          />
-          <div className="bg-surfaceDark border border-[#D4AF37]/20 rounded-3xl p-8">
-            <div className="text-center space-y-6">
-              <TextComponent
-                type="body"
-                content="Recebe milhares de novos moradores todos os meses — pessoas deixando lugares caros para construir um futuro mais próspero."
-                className="text-zinc-300"
-              />
-              <hr className="border-border" />
-              <TextComponent
-                type="body"
-                content="A economia texana é gigante, maior que muitos países, e continua atraindo empresas e investimentos."
-                className="text-zinc-300"
-              />
-              <hr className="border-border" />
-              <TextComponent
-                type="body"
-                content="A criação de empregos supera a média nacional e setores como tecnologia, saúde e construção seguem aquecidos."
-                className="text-zinc-300"
-              />
-            </div>
-          </div>
-
-          <TextComponent
-            type="body"
-            content="Isso significa que, se você fizer as escolhas certas e tiver um plano bem estruturado, suas chances de sucesso aumentam exponencialmente."
-            className="text-center max-w-4xl mx-auto text-zinc-200"
-          />
-
-          <div className="pt-2 text-center">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-                Quero fazer minha aplicação
-              </button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================
-          DOBRA 4 – AUTORIDADE
-      ====================== */}
-      <section className="py-24 px-6 bg-zinc-950">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative border-3 border-accent max-w-[500px] h-[450px] md:h-[600px] overflow-hidden flex items-center justify-center rounded-3xl">
-            <img
-              src="/imagens/fotoPrincipal.png"
-              className="object-cover rounded-xl"
-            />
-          </div>
-          <div className="space-y-6">
-            <p className="font-bold text-[32px] lg:text-[40px] leading-[1.2] tracking-[-0.02em] text-white">Wesley não fala de teoria, ele fala de <span className="text-accent">EXPERIÊNCIA.</span></p>
-            <TextComponent type="body" content="Imigrante que passou pelo processo real e entendeu os erros e acertos em sua jornada." className="text-zinc-300" />
-            <TextComponent type="body" content="Mentor que ajuda brasileiros a terem conexões reais e networking estratégico no estado mais conservador dos EUA." className="text-zinc-300" />
-            <TextComponent type="body" content="Histórias e informações reais sobre o dia a dia no Texas." className="text-zinc-300" />
-
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-                Quero fazer minha aplicação
-              </button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================
-          DOBRA 5 – ENTREGA
-      ====================== */}
-      <section className="relative py-24 px-6 bg-zinc-900">
-        <div className="max-w-5xl mx-auto space-y-12">
-          <div className="space-y-4">
-            <TextComponent
-              type="sectionTitle"
-              content="O que você vai receber na mentoria"
-              className="text-center text-white"
-            />
-            <TextComponent
-              type="body"
-              content="Ao entrar na minha mentoria exclusiva você terá acesso a:"
-              className="text-center text-zinc-300 text-lg"
-            />
-          </div>
-
-          <div className="space-y-4">
-            {[
-              "Estratégias claras para iniciar sua vida aqui no Texas.",
-              "Caminhos inteligentes para usar seu capital a seu favor.",
-              "Conexão com especialistas em cada área de imigração e internacionalização de patrimônio.",
-              "Acompanhamento pessoal da sua jornada (em encontros pontuais!).",
-              "Apoio de profissionais em decisões imobiliárias e investimentos.",
-              "Networking com outros brasileiros que estão no mesmo caminho.",
-              "Acesso à uma comunidade exclusiva.",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 bg-zinc-800 p-5 rounded-xl border border-zinc-700/50"
-              >
-                <img src="/imagens/check.svg" className="w-[40px] h-[40px] shrink-0 mt-1" />
-                <TextComponent type="body" content={text} className="text-zinc-300" />
+              {/* CTA */}
+              <div className="flex justify-center">
+                <div className="flex items-center bg-gold rounded-[15px] px-10 h-[55px] space-x-2 buttonHover">
+                  <button className="font-semibold buttonHover text-black">
+                    Quero entrar na mentoria
+                  </button>
+                  <img src="/imagens/arrow.svg" className="" />
+                </div>
               </div>
-            ))}
+
+              {/* Trust indicators */}
+              <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground animate-fade-in-slow">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-gold rounded-full" />
+                  <span>Comunidade exclusiva</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-gold rounded-full" />
+                  <span>Suporte personalizado</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[90px] bg-gradient-to-b from-transparent to-black" />
+
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
-      {/* =====================
-          DOBRA 6 – URGÊNCIA
-      ====================== */}
-      <section className="relative py-24 px-6 bg-gradient-to-br from-[#5E1212] pt-[90px] pb-[150px] via-black to-[#0F2A44]">
-        <div className="pointer-events-none absolute top-0 left-0 w-full h-[90px] bg-gradient-to-b from-black to-transparent" />
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <TextComponent
-            type="sectionTitle"
-            content="O Texas está crescendo. A demanda está alta."
-          />
-
-          <TextComponent
-            type="body"
-            content="As vagas, os investimentos e as oportunidades não esperam, elas são tomadas por quem age agora."
-          />
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="cta-premium px-14 py-5 bg-accent cursor-pointer text-black font-bold rounded-2xl shadow-xl hover:scale-100 transition-all">
-              Quero fazer minha aplicação
-            </button>
-          </a>
-
-          <TextComponent
-            type="lead"
-            content="Vagas limitadas para mentoria com acompanhamento pessoal e suporte exclusivo."
-            className={"mt-6"}
-          />
+      <div
+        className="
+          relative border-y border-gold text-center font-bold w-full py-8
+          bg-no-repeat bg-center bg-cover
+        "
+        style={{
+          backgroundImage: "url('/imagens/texasBanner.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
+        <div className="relative font-extrabold leading-[1.15]">
+          <p className="text-[25px]">A MAIOR COMUNIDADE DE</p>
+          <p className="text-[28px]">BRASILEIROS NO TEXAS</p>
         </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[90px] bg-gradient-to-b from-transparent to-black" />
+      </div>
+
+      <section className="py-24 bg-background relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Title */}
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+              Esta mentoria é para você que já…
+            </h2>
+
+            {/* Pain points */}
+            <div className="space-y-6">
+              {painPoints.map((point, index) => (
+                <div
+                  key={index}
+                  className="group flex p-6 space-x-4 items-center bg-cardBg rounded-3xl border border-border/50 hover:border-gold/30 transition-all duration-300 hover:shadow-glow"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+                    <point.icon className="w-6 h-6 text-gold" />
+                  </div>
+                  <p className="text-[17px] text-foreground/90 leading-relaxed">
+                    {point.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Empathy statement */}
+            <div className="mt-12 p-8 bg-secondary/30 rounded-3xl border border-border/30 text-center">
+              <p className="text-lg md:text-xl text-muted-foreground leading-[1.3]">
+                <span className="text-foreground font-medium">Você não está sozinho:</span>{" "}
+                eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-    </main>
-  );
+    </div>
+  )
 }

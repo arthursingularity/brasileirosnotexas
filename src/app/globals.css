@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans: 'Creato', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
 body {
@@ -9,48 +9,72 @@ body {
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-LIGHT.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-THIN.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/INTER-EXTRALIGHT.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/INTER-LIGHT.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/INTER-REGULAR.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-REGULAR.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-MEDIUM.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-MEDIUM.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-SEMIBOLD.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-EXTRABOLD.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-BOLD.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-BOLD.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-EXTRABOLD.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Creato';
-  src: url('/fontes/CREATODISPLAY-BLACK.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('/fontes/INTER-BLACK.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -59,197 +83,31 @@ body {
 @theme {
     --font-sans: 'Creato';
     --color-textTertiary: #64748B;
-    --color-primary: #8B1E1E;
-    --color-primaryDark: #5E1212;
-    --color-secondary: #043788;
-    --color-secondaryDark: #091C2E;
+    --color-primary: #F4A621;
+    --color-secondary: #21242c;
+    --color-foreground: #f8f6f2;
+    --color-muted-foreground: #7F8696;
+    --color-border: #272c35;
+    --color-gold: #f59f0a;
 
-    --color-accent: #D4AF37;
-    --color-accentSoft: #F1D27A;
-
-    --color-backgroundDark: #0A0A0A;
-    --color-surfaceDark: #141414;
+    --color-background: #13161C;
+    --color-heroBg: #0c0e12;
     --color-border: #262626;
 
     --color-textPrimary: #FFFFFF;
     --color-textSecondary: #BDBDBD;
     --color-textMuted: #9CA3AF;
+    --color-cardBg: #191d24;
+    --color-gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(42 100% 65%));
+    --color-gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 20% 4%));
+    --color-gradient-hero: radial-gradient(ellipse at top, hsl(220 18% 12%), hsl(220 20% 6%));
 }
 
 .buttonHover:hover {
-  filter: brightness(90%);
+  filter: brightness(85%);
   cursor: pointer;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradientMoveSlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* HERO */
-.animated-gradient {
-  background-image: linear-gradient(
-    -45deg,
-    #B31942,
-    #002776,
-    #009C3B,
-    #0A3161
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  will-change: background-position;
-}
-
-/* FOOTER / URGÊNCIA */
-.animated-gradient-slow {
-  background-image: linear-gradient(
-    120deg,
-    #000000,
-    #0A3161,
-    #002776
-  );
-  background-size: 300% 300%;
-  animation: gradientMoveSlow 30s ease infinite;
-  will-change: background-position;
-}
-
-.cta-premium {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.cta-premium:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 15px 35px rgba(255, 223, 0, 0.25);
-}
-
-/* =========================
-   BOTÕES – HOVER PREMIUM
-========================= */
-
-.btn-animated {
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
-}
-
-/* Desktop hover */
-@media (hover: hover) and (pointer: fine) {
-  .btn-animated:hover {
-    transform: translateY(-3px) scale(1.015);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-    filter: brightness(1.05);
-  }
-
-  .btn-animated::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.35),
-      transparent
-    );
-    transform: translateX(-100%) rotate(25deg);
-    transition: transform 0.6s ease;
-  }
-
-  .btn-animated:hover::after {
-    transform: translateX(100%) rotate(25deg);
-  }
-}
-
-@media (hover: none) {
-  .btn-animated:active {
-    transform: scale(0.98);
-    filter: brightness(0.95);
-  }
-}
-
-@keyframes pulseSoft {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.5);
-  }
-  70% {
-    box-shadow: 0 0 0 14px rgba(255, 223, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0);
-  }
-}
-
-.cta-pulse {
-  animation: pulseSoft 1.6s ease-out 2;
-}
-
-.cta-attention {
-  transform: translateY(-2px) scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-.cta-hero {
-  letter-spacing: 0.02em;
-}
-
-.cta-secondary {
-  background-size: 200% 200%;
-}
-
-.cta-secondary:hover {
-  background-position: right center;
-}
-
-.cta-urgent {
-  animation: none;
-}
-
-@media (hover: hover) {
-  .cta-urgent:hover {
-    transform: scale(1.04);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .cta-pulse {
-    animation: none;
-  }
-}
-
-.hero-banner {
-  background-image: url("/imagens/banner4.png");
-  background-size: contain;
-}
-
-/* Notebook / Laptop em diante */
-@media (min-width: 450px) {
-  .hero-banner {
-    background-image: url("/imagens/banner3.png");
-    background-size: cover;
-  }
+.bg-gradient-card {
+  background: var(--color-gradient-card);
 }

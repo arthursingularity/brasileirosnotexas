@@ -2,7 +2,7 @@ export default function TextComponent({ type, content, className }) {
     const textVariants = {
         h1: {
             tag: "h1",
-            class: "text-4xl md:text-5xl font-bold leading-tight tracking-tight text-textPrimary"
+            class: "text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-textPrimary"
         },
         h2: {
             tag: "h2",
