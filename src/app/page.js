@@ -191,10 +191,14 @@ export default function Home() {
                 <span className="text-foreground font-medium">suas chances de sucesso aumentam exponencialmente.</span>
               </p>
 
-              <button variant="hero" size="xl" className="group">
-                Quero fazer minha aplicação
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="flex justify-center">
+                <div className="flex items-center bg-gold rounded-[15px] px-10 h-[55px] space-x-2 buttonHover">
+                  <button className="font-semibold buttonHover text-black">
+                    Quero entrar na mentoria
+                  </button>
+                  <img src="/imagens/arrow.svg" className="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
