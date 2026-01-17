@@ -98,7 +98,7 @@ body {
     --color-textPrimary: #FFFFFF;
     --color-textSecondary: #BDBDBD;
     --color-textMuted: #9CA3AF;
-    --color-cardBg: #191d24;
+    --color-cardBg: #15191F;
     --color-gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(42 100% 65%));
     --color-gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 20% 4%));
     --color-gradient-hero: radial-gradient(ellipse at top, hsl(220 18% 12%), hsl(220 20% 6%));

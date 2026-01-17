@@ -101,7 +101,7 @@ export default function Home() {
         }}
       >
 
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-black/75 backdrop-blur-[1px]" />
         <div className="relative font-extrabold leading-[1.15]">
           <p className="text-[25px]">A MAIOR COMUNIDADE DE</p>
           <p className="text-[28px]">BRASILEIROS NO TEXAS</p>
@@ -152,27 +152,13 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             {/* Title */}
             <div className="text-center mb-16">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                O Texas não é apenas um destino,
-                <br />
-                <span className="text-gradient-gold">é um estado que cresce de verdade</span>
+              <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                O Texas não é apenas um destino, é um estado que cresce de verdade
               </h2>
             </div>
 
             {/* Mind Map Style Layout */}
             <div className="relative">
-              {/* Central element */}
-              <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary/20 rounded-full items-center justify-center border border-primary/30">
-                <Star className="w-10 h-10 text-primary fill-primary/30" />
-              </div>
-
-              {/* Connection lines (decorative) */}
-              <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
-                <div className="absolute top-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-b from-transparent to-primary/30" />
-                <div className="absolute bottom-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-t from-transparent to-primary/30" />
-                <div className="absolute top-1/2 left-0 h-px w-[calc(50%-48px)] bg-gradient-to-r from-transparent to-primary/30" />
-                <div className="absolute top-1/2 right-0 h-px w-[calc(50%-48px)] bg-gradient-to-l from-transparent to-primary/30" />
-              </div>
 
               {/* Benefits cards */}
               <div className="grid md:grid-cols-3 gap-8 relative z-10">
