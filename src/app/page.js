@@ -14,7 +14,7 @@ export default function Home() {
       text: "Tem capital para investir no estado que mais cresce nos Estados Unidos, mas não sabe como transformar isso em oportunidades reais?",
     },
     {
-      icon: "business.svg",
+      icon: "warning.svg",
       text: "Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?",
     },
   ];
@@ -99,7 +99,7 @@ export default function Home() {
               {painPoints.map((point, index) => (
                 <div
                   key={index}
-                  className="group flex p-6 space-x-4 items-center bg-cardBg rounded-3xl border border-border/50 hover:border-gold/30 transition-all duration-300 hover:shadow-glow"
+                  className="group flex p-6 space-x-6 items-center bg-cardBg rounded-3xl border border-border/50 hover:border-gold/30 transition-all duration-300 hover:shadow-glow"
                 >
                   <div className="flex-shrink-0 w-[50px] h-[50px] rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <img src={`/imagens/${point.icon}`} className="w-[30px]" />
