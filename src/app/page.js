@@ -1,7 +1,7 @@
 "use client"
 
 import NavBar from "./components/ui/NavBar"
-import { HelpCircle, TrendingUp, AlertTriangle } from "lucide-react";
+import { ArrowRight, Users, TrendingUp, Briefcase, Star } from "lucide-react";
 
 export default function Home() {
   const painPoints = [
@@ -16,6 +16,27 @@ export default function Home() {
     {
       icon: "warning.svg",
       text: "Já pesquisou sobre o Texas, mas as informações são confusas, contraditórias e te deixam inseguro?",
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: Users,
+      title: "Crescimento Populacional",
+      description: "Recebe milhares de novos moradores todos os meses — pessoas deixando lugares caros para construir um futuro mais próspero.",
+      source: "Houston Chronicle",
+    },
+    {
+      icon: TrendingUp,
+      title: "Economia Gigante",
+      description: "A economia texana é maior que muitos países, e continua atraindo empresas e investimentos de todo o mundo.",
+      source: "Wikipedia",
+    },
+    {
+      icon: Briefcase,
+      title: "Mercado Aquecido",
+      description: "A criação de empregos supera a média nacional. Setores como tecnologia, saúde e construção seguem em expansão.",
+      source: "Houston Chronicle",
     },
   ];
 
@@ -87,9 +108,9 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="py-24 bg-background relative">
-        <div className="container px-4">
-          <div className="max-w-4xl">
+      <section className="py-24 bg-background relative ">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto">
             {/* Title */}
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
               Esta mentoria é para você que já…
@@ -118,6 +139,76 @@ export default function Home() {
                 <span className="text-foreground font-medium">Você não está sozinho:</span>{" "}
                 eu fiz esta mesma jornada há anos atrás e descobri o que ninguém conta sobre imigrar para o estado americano mais conservador.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-charcoal-light relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/3 rounded-full blur-[150px]" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Title */}
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                O Texas não é apenas um destino,
+                <br />
+                <span className="text-gradient-gold">é um estado que cresce de verdade</span>
+              </h2>
+            </div>
+
+            {/* Mind Map Style Layout */}
+            <div className="relative">
+              {/* Central element */}
+              <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary/20 rounded-full items-center justify-center border border-primary/30">
+                <Star className="w-10 h-10 text-primary fill-primary/30" />
+              </div>
+
+              {/* Connection lines (decorative) */}
+              <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
+                <div className="absolute top-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-b from-transparent to-primary/30" />
+                <div className="absolute bottom-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-t from-transparent to-primary/30" />
+                <div className="absolute top-1/2 left-0 h-px w-[calc(50%-48px)] bg-gradient-to-r from-transparent to-primary/30" />
+                <div className="absolute top-1/2 right-0 h-px w-[calc(50%-48px)] bg-gradient-to-l from-transparent to-primary/30" />
+              </div>
+
+              {/* Benefits cards */}
+              <div className="grid md:grid-cols-3 gap-8 relative z-10">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="group p-8 bg-gradient-card rounded-2xl border border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-glow"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                      <benefit.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold mb-3 text-foreground">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      {benefit.description}
+                    </p>
+                    <span className="text-xs text-primary/70">
+                      Fonte: {benefit.source}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Conclusion */}
+            <div className="mt-16 text-center">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                Isso significa que, se você fizer as escolhas certas e tiver um plano bem estruturado,{" "}
+                <span className="text-foreground font-medium">suas chances de sucesso aumentam exponencialmente.</span>
+              </p>
+
+              <button variant="hero" size="xl" className="group">
+                Quero fazer minha aplicação
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>

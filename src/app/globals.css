@@ -89,8 +89,9 @@ body {
     --color-muted-foreground: #7F8696;
     --color-border: #272c35;
     --color-gold: #f59f0a;
+    --color-charcoal-light: #191d24;
 
-    --color-background: #13161C;
+    --color-background: #0e1115;
     --color-heroBg: #0c0e12;
     --color-border: #262626;
 
@@ -106,8 +107,4 @@ body {
 .buttonHover:hover {
   filter: brightness(85%);
   cursor: pointer;
-}
-
-.bg-gradient-card {
-  background: var(--color-gradient-card);
 }
