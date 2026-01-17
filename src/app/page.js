@@ -40,7 +40,7 @@ export default function Home() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in animation-delay-400">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-[1.3] animate-fade-in animation-delay-400">
                 Descubra o roteiro completo para imigrar ou investir no Texas com quem já fez isso antes e já ajudou dezenas de brasileiros
               </p>
 
@@ -86,11 +86,12 @@ export default function Home() {
           <p className="text-[28px]">BRASILEIROS NO TEXAS</p>
         </div>
       </div>
+
       <section className="py-24 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="container px-4">
+          <div className="max-w-4xl">
             {/* Title */}
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
               Esta mentoria é para você que já…
             </h2>
 
