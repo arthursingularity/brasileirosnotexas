@@ -285,21 +285,21 @@ export default function Home() {
                 {/* Bullet points */}
                 <div className="space-y-5 mb-10">
                   <div className="space-y-5">
-                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl p-5">
                       <p className="text-[25px]">✈️</p>
-                      <p className="text-lg text-foreground/85 leading-[1.4]">
+                      <p className="text-lg text-foreground/70 leading-[1.3]">
                         Imigrante que passou pelo processo real e entendeu os erros e acertos em sua jornada.
                       </p>
                     </div>
-                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
-                      <p className="text-[25px]">🇧🇷</p>
-                      <p className="text-lg text-foreground/85 leading-[1.4]">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl p-5">
+                      <img src="/imagens/br.png" className="w-[30px]"/>
+                      <p className="text-lg text-foreground/70 leading-[1.3]">
                         Mentor que ajuda brasileiros a terem conexões reais e networking estratégico no estado mais conservador dos EUA.
                       </p>
                     </div>
-                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
-                      <p className="text-[25px]">🇺🇸</p>
-                      <p className="text-lg text-foreground/85 leading-[1.4]">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl p-5">
+                    <img src="/imagens/us.png" className="w-[30px]"/>
+                      <p className="text-lg text-foreground/70 leading-[1.3]">
                         Histórias e informações reais sobre o dia a dia no Texas.
                       </p>
                     </div>
