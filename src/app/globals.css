@@ -131,9 +131,9 @@ body {
     --color-gradient-hero: radial-gradient(ellipse at top, #1a1f29, #0d0f14);
     
     /* Shadows */
-    --color-shadow-gold: 0 4px 30px -5px #f59e0b4d;
-    --color-shadow-card: 0 10px 40px -10px #00000080;
-    --color-shadow-glow: 0 0 60px -10px #f59e0b33;
+    --color-shadow-gold: #f59e0b4d;
+    --color-shadow-card: #00000080;
+    --color-shadow-glow: #f59e0b33;
     
     /* Sidebar */
     --color-sidebar-background: #0d0f14;

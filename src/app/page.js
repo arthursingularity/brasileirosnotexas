@@ -21,17 +21,17 @@ export default function Home() {
 
   const benefits = [
     {
-      icon: Users,
+      icon: "people.svg",
       title: "Crescimento Populacional",
       description: "Recebe milhares de novos moradores todos os meses.",
     },
     {
-      icon: TrendingUp,
+      icon: "finance.svg",
       title: "Economia Gigante",
       description: "A economia texana é maior que muitos países, e continua atraindo empresas e investimentos de todo o mundo.",
     },
     {
-      icon: Briefcase,
+      icon: "job.svg",
       title: "Mercado de trabalho Aquecido",
       description: "A criação de empregos supera a média nacional. Setores como tecnologia, saúde e construção seguem em expansão.",
     },
@@ -204,15 +204,15 @@ export default function Home() {
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="group p-7 bg-cardBg2/70 rounded-3xl border border-border/50 hover:border-gold/40 transition-all duration-300 hover:shadow-glow"
+                    className="group p-7 bg-cardBg2/70 rounded-3xl border border-border/50 hover:border-gold/40"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                      <benefit.icon className="w-7 h-7 text-gold" />
+                    <div className="flex-shrink-0 w-[50px] h-[50px] rounded-xl mb-3 bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+                      <img src={`/imagens/${benefit.icon}`} className="w-[30px]" />
                     </div>
                     <h3 className="font-display text-xl font-semibold mb-3 text-foreground">
                       {benefit.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
