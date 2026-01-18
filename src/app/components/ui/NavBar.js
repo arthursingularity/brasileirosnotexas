@@ -10,9 +10,16 @@ export default function () {
                     </div>
                 </div>
 
-                <button className="bg-gold rounded-[10px] h-[37px] px-3 font-medium buttonHover text-[14px] text-black">
-                    Aplicar Agora
-                </button>
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
+                >
+                    <button className="bg-gold rounded-[10px] h-[37px] px-3 font-medium buttonHover text-[14px] text-black">
+                        Aplicar Agora
+                    </button>
+                </a>
             </div>
         </header>
     )

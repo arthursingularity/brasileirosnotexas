@@ -82,28 +82,119 @@ body {
 
 @theme {
     --font-sans: 'Creato';
-    --color-textTertiary: #64748B;
-    --color-secondary: #21242c;
-    --color-foreground: #f8f6f2;
-    --color-muted-foreground: #7F8696;
-    --color-border: #272c35;
     --color-gold: #F4A621;
-    --color-charcoal-light: #191d24;
-
-    --color-background: #0e1115;
-    --color-heroBg: #0c0e12;
-    --color-border: #262626;
-
-    --color-textPrimary: #FFFFFF;
-    --color-textSecondary: #BDBDBD;
-    --color-textMuted: #9CA3AF;
-    --color-cardBg: #15191F;
-    --color-gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(42 100% 65%));
-    --color-gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 20% 4%));
-    --color-gradient-hero: radial-gradient(ellipse at top, hsl(220 18% 12%), hsl(220 20% 6%));
+    --color-background: #0d0f14;
+    --color-foreground: #f7f2e6;
+    
+    --color-card: #141820;
+    --color-cardBg: #141820;
+    --color-cardBg2: #1E222B;
+    --color-card-foreground: #f7f2e6;
+    
+    --color-popover: #141820;
+    --color-popover-foreground: #f7f2e6;
+    
+    --color-primary: #f59e0b;
+    --color-primary-foreground: #0d0f14;
+    
+    --color-secondary: #1f2430;
+    --color-secondary-foreground: #f0e9d8;
+    
+    --color-muted: #242a36;
+    --color-muted-foreground: #7f8794;
+    
+    --color-accent: #e6950f;
+    --color-accent-foreground: #0d0f14;
+    
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #f8fafc;
+    
+    --color-border: #242a36;
+    --color-input: #242a36;
+    --color-ring: #f59e0b;
+    
+    --radius: 0.75rem;
+    
+    /* Custom tokens */
+    --color-gold: #f59e0b;
+    --color-gold-light: #ffd166;
+    --color-gold-dark: #b8730f;
+    --color-texas-rust: #c05a24;
+    --color-cream: #f7f2e6;
+    --color-charcoal: #11141b;
+    --color-charcoal-light: #1a1f29;
+    
+    /* Gradients */
+    --color-gradient-gold: linear-gradient(135deg, #f59e0b, #ffd166);
+    --color-gradient-dark: linear-gradient(180deg, #0d0f14, #080a0e);
+    --color-gradient-card: linear-gradient(145deg, #1a1f29, #11141b);
+    --color-gradient-hero: radial-gradient(ellipse at top, #1a1f29, #0d0f14);
+    
+    /* Shadows */
+    --color-shadow-gold: 0 4px 30px -5px #f59e0b4d;
+    --color-shadow-card: 0 10px 40px -10px #00000080;
+    --color-shadow-glow: 0 0 60px -10px #f59e0b33;
+    
+    /* Sidebar */
+    --color-sidebar-background: #0d0f14;
+    --color-sidebar-foreground: #f7f2e6;
+    --color-sidebar-primary: #f59e0b;
+    --color-sidebar-primary-foreground: #0d0f14;
+    --color-sidebar-accent: #1f2430;
+    --color-sidebar-accent-foreground: #f7f2e6;
+    --color-sidebar-border: #242a36;
+    --color-sidebar-ring: #f59e0b;
+    
 }
 
 .buttonHover:hover {
   filter: brightness(85%);
   cursor: pointer;
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.border-gold-subtle {
+  border-color: hsl(38 92% 50% / 0.2);
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .border-gold-subtle {
+    border-color: hsl(38 92% 50% / 0.2);
+  }
 }

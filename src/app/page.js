@@ -23,20 +23,17 @@ export default function Home() {
     {
       icon: Users,
       title: "Crescimento Populacional",
-      description: "Recebe milhares de novos moradores todos os meses — pessoas deixando lugares caros para construir um futuro mais próspero.",
-      source: "Houston Chronicle",
+      description: "Recebe milhares de novos moradores todos os meses.",
     },
     {
       icon: TrendingUp,
       title: "Economia Gigante",
       description: "A economia texana é maior que muitos países, e continua atraindo empresas e investimentos de todo o mundo.",
-      source: "Wikipedia",
     },
     {
       icon: Briefcase,
-      title: "Mercado Aquecido",
+      title: "Mercado de trabalho Aquecido",
       description: "A criação de empregos supera a média nacional. Setores como tecnologia, saúde e construção seguem em expansão.",
-      source: "Houston Chronicle",
     },
   ];
 
@@ -53,13 +50,13 @@ export default function Home() {
   return (
     <div className="text-white">
       <NavBar />
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden ">
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <img
             src="/imagens/texas-skyline.jpg"
             alt="Texas skyline at sunset"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover "
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/95 to-background" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-transparent to-background/90" />
@@ -69,7 +66,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
         {/* Glow effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gold/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -88,12 +85,17 @@ export default function Home() {
 
             {/* CTA */}
             <div className="flex justify-center">
-              <div className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2">
-                <button className="font-medium buttonHover text-[17px] text-black">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2"
+              >
+                <span className="font-medium buttonHover text-[17px] text-black">
                   Quero entrar na mentoria
-                </button>
-                <img src="/imagens/arrow.svg" />
-              </div>
+                </span>
+                <img src="/imagens/arrow.svg" alt="Seta" />
+              </a>
             </div>
           </div>
         </div>
@@ -109,14 +111,14 @@ export default function Home() {
         }}
       >
 
-        <div className="absolute inset-0 bg-black/75 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-black/80" />
         <div className="relative font-extrabold leading-[1.15]">
           <p className="text-[25px]">A MAIOR COMUNIDADE DE</p>
           <p className="text-[28px]">BRASILEIROS NO TEXAS</p>
         </div>
       </div>
 
-      <section className="py-24 bg-background relative ">
+      <section className="py-16 bg-background relative ">
         <div className="container px-6 mx-auto">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
@@ -129,7 +131,7 @@ export default function Home() {
               {painPoints.map((point, index) => (
                 <div
                   key={index}
-                  className="group flex p-6 space-x-6 items-center bg-cardBg rounded-3xl border border-border/50 hover:border-gold/30 transition-all duration-300 hover:shadow-glow"
+                  className="group flex p-6 space-x-6 items-center bg-cardBg/70 rounded-3xl border border-border/50 hover:border-gold/30 hover:shadow-glow"
                 >
                   <div className="flex-shrink-0 w-[50px] h-[50px] rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <img src={`/imagens/${point.icon}`} className="w-[30px]" />
@@ -152,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="beneficios" className="py-24 bg-charcoal-light relative overflow-hidden">
+      <section id="beneficios" className="py-16 bg-charcoal-light/70 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/3 rounded-full blur-[150px]" />
 
@@ -160,10 +162,9 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             {/* Title */}
             <div className="text-center mb-16">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                O Texas não é apenas um destino,
-                <br />
-                <span className="text-gradient-gold">é um estado que cresce de verdade</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+                O Texas não é apenas um destino, é um estado que
+                <span className="text-gold font-bold"> cresce de verdade</span>
               </h2>
             </div>
 
@@ -178,7 +179,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-sm text-gold font-medium">Terra de oportunidades</p>
-                  <p className="text-foreground font-display text-lg">Vastas paisagens e prosperidade</p>
+                  <p className="text-foreground font-medium text-lg">Paisagens incríveis e prosperidade</p>
                 </div>
               </div>
               <div className="relative group overflow-hidden rounded-2xl">
@@ -190,32 +191,20 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-sm text-gold font-medium">Estado conservador</p>
-                  <p className="text-foreground font-display text-lg">Valores tradicionais e liberdade</p>
+                  <p className="text-foreground font-medium text-lg">Valores e liberdade</p>
                 </div>
               </div>
             </div>
 
             {/* Mind Map Style Layout */}
             <div className="relative">
-              {/* Central element */}
-              <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gold/20 rounded-full items-center justify-center border border-gold/30 z-20">
-                <Star className="w-10 h-10 text-gold fill-gold/30" />
-              </div>
-
-              {/* Connection lines (decorative) */}
-              <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
-                <div className="absolute top-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-b from-transparent to-gold/30" />
-                <div className="absolute bottom-0 left-1/2 w-px h-[calc(50%-48px)] bg-gradient-to-t from-transparent to-gold/30" />
-                <div className="absolute top-1/2 left-0 h-px w-[calc(50%-48px)] bg-gradient-to-r from-transparent to-gold/30" />
-                <div className="absolute top-1/2 right-0 h-px w-[calc(50%-48px)] bg-gradient-to-l from-transparent to-gold/30" />
-              </div>
 
               {/* Benefits cards */}
               <div className="grid md:grid-cols-3 gap-8 relative z-10">
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="group p-8 bg-gradient-card rounded-2xl border border-border/50 hover:border-gold/40 transition-all duration-300 hover:shadow-glow"
+                    className="group p-7 bg-cardBg2/70 rounded-3xl border border-border/50 hover:border-gold/40 transition-all duration-300 hover:shadow-glow"
                   >
                     <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
                       <benefit.icon className="w-7 h-7 text-gold" />
@@ -226,9 +215,6 @@ export default function Home() {
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {benefit.description}
                     </p>
-                    <span className="text-xs text-gold/70">
-                      Fonte: {benefit.source}
-                    </span>
                   </div>
                 ))}
               </div>
@@ -242,19 +228,24 @@ export default function Home() {
               </p>
 
               <div className="flex justify-center">
-                <div className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2">
-                  <button className="font-medium buttonHover text-[17px] text-black">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2"
+                >
+                  <span className="font-medium buttonHover text-[17px] text-black">
                     Quero entrar na mentoria
-                  </button>
-                  <img src="/imagens/arrow.svg" />
-                </div>
+                  </span>
+                  <img src="/imagens/arrow.svg" alt="Seta" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="wesley py-24 bg-background relative overflow-hidden">
         {/* Background glow */}
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gold/3 rounded-full blur-[150px]" />
 
@@ -294,19 +285,19 @@ export default function Home() {
                 {/* Bullet points */}
                 <div className="space-y-5 mb-10">
                   <div className="space-y-5">
-                    <div className="flex bg-cardBg items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
                       <p className="text-[25px]">✈️</p>
                       <p className="text-lg text-foreground/85 leading-[1.4]">
                         Imigrante que passou pelo processo real e entendeu os erros e acertos em sua jornada.
                       </p>
                     </div>
-                    <div className="flex bg-cardBg items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
                       <p className="text-[25px]">🇧🇷</p>
                       <p className="text-lg text-foreground/85 leading-[1.4]">
                         Mentor que ajuda brasileiros a terem conexões reais e networking estratégico no estado mais conservador dos EUA.
                       </p>
                     </div>
-                    <div className="flex bg-cardBg items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
+                    <div className="flex bg-cardBg/40 items-center space-x-4 border border-border/70 rounded-3xl py-4 px-5">
                       <p className="text-[25px]">🇺🇸</p>
                       <p className="text-lg text-foreground/85 leading-[1.4]">
                         Histórias e informações reais sobre o dia a dia no Texas.
@@ -317,12 +308,17 @@ export default function Home() {
 
                 {/* CTA */}
                 <div className="flex justify-center">
-                  <div className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2">
-                    <button className="font-medium buttonHover text-[17px] text-black">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gold buttonHover rounded-[15px] h-[55px] w-[320px] flex items-center justify-center space-x-2"
+                  >
+                    <span className="font-medium buttonHover text-[17px] text-black">
                       Quero entrar na mentoria
-                    </button>
-                    <img src="/imagens/arrow.svg" />
-                  </div>
+                    </span>
+                    <img src="/imagens/arrow.svg" alt="Seta" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -330,9 +326,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="mentoria" className="py-16 bg-charcoal-light relative overflow-hidden">
+      <section id="mentoria" className="py-16 bg-charcoal-light/70 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/3 rounded-full blur-[200px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/3 rounded-full blur-[200px] hidden md:block" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -351,10 +347,10 @@ export default function Home() {
                 {offerings.map((offering, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-5 bg-gradient-card rounded-xl border border-border/50 hover:border-gold/30 transition-all duration-300"
+                    className="flex items-center gap-4 p-5 bg-cardBg2 rounded-xl border border-border/70 hover:border-gold/30"
                   >
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold flex items-center justify-center">
-                      <Check className="w-4 h-4 text-gold-foreground" />
+                    <div className="flex items-center justify-center">
+                      <Check className="w-6 text-gold" />
                     </div>
                     <p className="text-foreground/90">{offering}</p>
                   </div>
@@ -391,14 +387,14 @@ export default function Home() {
           <img
             src="/imagens/usa-flag.png"
             alt="Texas skyline"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transform-gpu"
           />
           <div className="absolute inset-0 bg-background/93" />
         </div>
 
         {/* Background effects */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gold/10 rounded-full blur-[150px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gold/3 rounded-full blur-[150px]" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -413,14 +409,19 @@ export default function Home() {
             </p>
 
             {/* CTA Box */}
-            <div className="relative p-6 space-y-6 bg-gradient-card rounded-4xl border border-gold/30 shadow-glow mb-8 backdrop-blur-lg">
+            <div className="relative p-6 space-y-6 rounded-4xl border border-gold/30 shadow-glow mb-8 backdrop-blur-lg">
               <div className="flex justify-center">
-                <div className="bg-gold buttonHover rounded-[15px] h-[55px] w-full flex items-center justify-center space-x-2">
-                  <button className="font-medium buttonHover text-[17px] text-black">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfhvx0_1TvtPPCiCJL8PIYUkwHDvbhAcpoA22lFxmckm_jrTg/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gold buttonHover rounded-[15px] h-[55px] w-full flex items-center justify-center space-x-2"
+                >
+                  <span className="font-medium buttonHover text-[17px] text-black">
                     Quero entrar na mentoria
-                  </button>
-                  <img src="/imagens/arrow.svg" />
-                </div>
+                  </span>
+                  <img src="/imagens/arrow.svg" alt="Seta" />
+                </a>
               </div>
 
               {/* Urgency indicators */}
