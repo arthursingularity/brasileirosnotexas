@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className="text-white">
       <NavBar />
-      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden ">
+      <section className="relative min-h-[100svh] mt-16 flex items-center justify-center overflow-hidden ">
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <img
