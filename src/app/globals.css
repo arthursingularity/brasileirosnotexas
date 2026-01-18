@@ -83,12 +83,11 @@ body {
 @theme {
     --font-sans: 'Creato';
     --color-textTertiary: #64748B;
-    --color-primary: #F4A621;
     --color-secondary: #21242c;
     --color-foreground: #f8f6f2;
     --color-muted-foreground: #7F8696;
     --color-border: #272c35;
-    --color-gold: #f59f0a;
+    --color-gold: #F4A621;
     --color-charcoal-light: #191d24;
 
     --color-background: #0e1115;
