@@ -1,29 +1,31 @@
-import "./globals.css"
+import "./globals.css";
 
 export const metadata = {
-  title: {
-    default: "Comunidade Brasileiros no Texas"
-  },
+  title: "Comunidade Brasileiros no Texas",
   description: "Realize o seu sonho de morar nos Estados Unidos",
+
   openGraph: {
     title: "Comunidade Brasileiros no Texas",
-    description:
-      "Realize o seu sonho de morar nos Estados Unidos",
-    url: "https://brasileirosnotexas.vercel.app/",
-    siteName: "Comunidade Brasileiros no Texas",
+    description: "Realize o seu sonho de morar nos Estados Unidos",
+    url: "https://comunidadebrasileirosnotexas.com/",
+    siteName: "Brasileiros no Texas",
     images: [
       {
-        url: "https://brasileirosnotexas.vercel.app/og-image.jpg",
-        width: 800,
-        height: 800,
+        url: "https://comunidadebrasileirosnotexas.com/og-image-v2.png",
+        width: 1200,
+        height: 630,
         alt: "Comunidade Brasileiros no Texas",
       },
     ],
     locale: "pt_BR",
     type: "website",
   },
-};
 
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
